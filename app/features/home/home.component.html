@@ -1,0 +1,12 @@
+
+
+<div class="row row-cols-nd-4">
+    @for (prod of productsService.products; track $index) {
+        <app-product-card 
+    [product]="prod" 
+    [isLoggedIn]="productsService.userName ? true : false" 
+    [inCart]="prod.inCart || false">
+</app-product-card>
+
+        }
+</div>
